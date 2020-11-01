@@ -20,12 +20,22 @@ namespace WindowsFormsApp2
         {
             InitializeComponent();
         }
-
+        
+        /*
+        Just a few comments for you Langa, not to critique anything you did too much but just to hopefully make you aware of a few things.
+        */
+        
+        // If you are not going to populate a method with any logic, it is better to delete it to keep your code cleaner.
         private void MyTimerEvent(object sender, EventArgs e)
         {
 
         }
 
+        // I also wanted to ask whether you understand the concepts of Events and how they are different to normal methods?
+        // By default ASP.NET Forms generates delegate and event sigantures for you (normally when creating some clickable UI component) to make your life easier. 
+        // Just wanted to make sure you understand why that happens.
+        // Events have these special type of Signatures which normally match to (Object sender, SomeCustomTypeGoesHere here).
+        
         private void GameKeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Space)
@@ -79,8 +89,6 @@ namespace WindowsFormsApp2
                 
                 endGame();
             }
-
-
             
             if (score > 5)
             {
